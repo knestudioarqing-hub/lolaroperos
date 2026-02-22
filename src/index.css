@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,600&display=swap');
+
+@theme {
+  --font-display: "Bodoni Moda", "Playfair Display", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #863466;
+  --color-secondary: #ac548c;
+  --color-accent: #b59e5d;
+  --color-accent-light: #d0c398;
+  --color-background-light: #F5F2F0;
+  --color-background-dark: #1a1a1a;
+  --color-surface-light: #ffffff;
+  --color-surface-dark: #2d2d2d;
+  --color-custom-gray: #c0bebd;
+  --color-custom-mauve: #b790a4;
+  --color-custom-pink: #debbcf;
+}
+
+@layer base {
+  body {
+    @apply bg-background-light text-[#333333] font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .mask-image-linear-gradient {
+    mask-image: linear-gradient(to right, black 0%, transparent 100%);
+  }
+}
